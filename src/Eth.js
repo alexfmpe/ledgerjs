@@ -302,7 +302,7 @@ eth.signPersonalMessage("44'/60'/0'/0/0", Buffer.from("test").toString("hex")).t
     let toSend = [];
     let response;
     while (offset !== message.length) {
-      let maxChunkSize = offset === 0 ? 150 - 1 - paths.length * 4 - 4 : 150;
+      let maxChunkSize = offset === 0 ? 56 - 1 - paths.length * 4 - 4 : 56;
       let chunkSize =
         offset + maxChunkSize > message.length
           ? message.length - offset
